@@ -11,7 +11,7 @@ function ProfileService() {
     }
     self.setUserProfile = (userPro) => {
         self.items = userPro;
-        $location.path("/profile.html")
+        $location.path("/profile.html");
     }
 
 }
