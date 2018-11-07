@@ -3,7 +3,7 @@ const profile = {
     templateUrl: "app/profile/profile.html",
     controller: ["ProfileService", function(ProfileService) {
         const vm = this;
-        vm.items = ProfileService.getItems();
+        vm.items = ProfileService.getUserProfile();
         console.log(vm.items.name);
       }]
 
