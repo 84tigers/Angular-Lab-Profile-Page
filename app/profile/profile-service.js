@@ -1,5 +1,5 @@
 "use strict";
-function ProfileService() {
+function ProfileService($location) {
     const self = this;
     self.items = 
         {name: "Grant Chirpus", 
