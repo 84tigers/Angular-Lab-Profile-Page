@@ -1,10 +1,12 @@
 <section class="profile-full">
-    <div class="profile-pic"></div>
-    <div class="info">
+    <div class="profile-pic">
+        <img ng-src="{{ $ctrl.items.img }}">
+    </div>
+    <div class="profile-container">
         <h1>{{ $ctrl.items.name }}</h1>
-        <p class="contact">{{ $ctrl.items.contact }}</p>
-        <p class="bio">{{ $ctrl.items.bio }}</p>
-        <button ng-click="$ctrl.loadEdit();">Edit</button>
+        <p class="profile-contact">{{ $ctrl.items.contact }}</p>
+        <p class="profile-bio">{{ $ctrl.items.bio }}</p>
+        <button class="profile-btn" ng-click="$ctrl.loadEdit();">Edit</button>
     </div>
 </section>
 
