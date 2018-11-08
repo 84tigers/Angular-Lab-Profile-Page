@@ -1,13 +1,11 @@
-<form ng-submit="$ctrl.saveUserProfile($ctrl.profileEdit)">
-    <img ng-src="{{ $ctrl.profileEdit.img }}">
-    <input type="text" ng-model="$ctrl.profileEdit.name">
-    <input type="text" ng-model="$ctrl.profileEdit.contact">
-    <input type="text" ng-model="$ctrl.profileEdit.bio">
-    <button>update</button>
+<form class="edit-form" ng-submit="$ctrl.saveUserProfile($ctrl.profileEdit)">
+    <p class="edit-title">Use the form below to update your profile.</p>
+    <label for="name">Name</label>
+    <input name="name" class="edit-input" type="text" ng-model="$ctrl.profileEdit.name">
+    <label for="contact">Contact</label>
+    <input name="contact" class="edit-input" type="text" ng-model="$ctrl.profileEdit.contact">
+    <label for="bio">Bio</label>
+    <textarea name="bio" id="edit-bio" class="edit-input" type="text" ng-model="$ctrl.profileEdit.bio"></textarea>
+    <button class="edit-btn">update</button>
 </form>
 
-
-<!-- <p>{{ $ctrl.toEdit.contact }}</p> -->
-<!-- <form  ng-submit="$ctrl.giveUserProfile($ctrl.userPro);">
-    <input type="text" ng-model="$ctrl.userPro.name">
-</form> -->
