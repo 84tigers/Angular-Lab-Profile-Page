@@ -3,13 +3,12 @@ const editor = {
     templateUrl: "app/editor/editor.html",
     controller: ["ProfileService", function(ProfileService) {
         const vm = this;
-        this.toEdit = ProfileService.getUserProfile();
-        // vm.items = ProfileService.setUserProfile(userPro);
-        // console.log(vm.items.name);
-        // vm.giveUserProfile = (userPro) => {
-        //     ProfileService.setUserProfile(userPro);
+        this.profileEdit = angular.copy(ProfileService.getUserProfile());
+        this.saveUserProfile = (userProfileEdit) => {
+            ProfileService.setUserProfile(userProfileEdit);
+        };
     }]
-}  
+};
 
 
 
